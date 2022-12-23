@@ -10,7 +10,7 @@ class Profile(models.Model):
     location = models.CharField(max_length=30, blank=True)
     birthdate = models.DateField(null=True, blank=True)
     def __str__(self):
-        return self.bio + self.location + self.birthdate
+        return self.bio + self.location + str(self.birthdate)
 
 class Post(models.Model):
     title = models.CharField(max_length=255)
@@ -19,4 +19,4 @@ class Post(models.Model):
     createddate = models.DateTimeField(auto_now_add=True)
     updateddate = models.DateTimeField(auto_now_add=True)
     def __str__(self):
-        return self.text + self.title + self.author + self.createddate
+        return self.text + self.title + str(self.author) + str(self.createddate)
