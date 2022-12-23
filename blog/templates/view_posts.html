@@ -9,7 +9,7 @@
     <body class="container">
         <form action="/posts/" method="GET">
             <div class="mb-3">
-                <input type="text" class="form-control" name="search" id="search" placeholder="search"  {% if search is not None%}value="{{ search }}" {% endif %}>
+                <input required type="text" class="form-control" name="search" id="search" placeholder="search"  {% if search is not None%}value="{{ search }}" {% endif %}>
               </div>
               <button type="submit" class="btn btn-primary" value="search">Submit</button>
               <a href="/posts"><button type="button" class="btn btn-dark">All</button></a>
